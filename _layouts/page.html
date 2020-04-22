@@ -1,21 +1,17 @@
-{% include header.html %}
+---
+layout: default
+---
+<article id="main">
 
-    <div class="wrapper">
-      <div class="content">
-        <div class="container container-center">
-          <div class="row">
-            <div class="col-md-8 offset-md-1">
-              <div class="card">
-                {{ content }}
-              </div>
-            </div>
-            <div class="col-md-3 hidden-xs">
-              {% include sidebar.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% include footer.html %}
+  <header>
+    <h2>{{ page.title }}</h2>
+    <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+  </header>
+
+  <section class="wrapper style5">
+    <div class="inner">
+      {{ content }}
     </div>
-  </body>
-</html>
+  </section>
+
+</article>
