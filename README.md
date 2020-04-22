@@ -1,88 +1,67 @@
-# Naringu
+Jekyll Clean Dark
+============
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-clean-dark.svg)](https://badge.fury.io/rb/jekyll-clean-dark)
 
-Naringu is dark jekyll theme that provide fully furnished jekyll setup, come with contact form, #6DD HTML color schema, and more features. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+This theme was created on top of Jekyll Clean theme by Scotte, you can view the original version in action [on his blog](https://scotte.github.io).
 
-![Naringu](images/screenshot-1.png)
-![Naringu](images/screenshot-2.png)
-![Naringu](images/screenshot-3.png)
-![Naringu](images/screenshot-4.png)
+* Get it from [github](https://github.com/streetturtle/jekyll-clean-dark).
+* See the [live demo](http://pavelmakhov.com/jekyll-clean-dark).
+* See it [in action on my own blog](http://pavelmakhov.com).
+* Easily [customizable](http://pavelmakhov.com/jekyll-clean-dark/2016/09/customizations)
 
-## Contents
+![preview1](./assets/images/preview1.jpg)
+![preview2](./assets/images/preview2.jpg)
+![preview3](./assets/images/preview3.jpg)
 
-- [Usage](#usage)
- - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-  - [Contact Form](#contact-form)
-  - [Comments](#comments)
-- [Development](#development)
-  - [Author](#author)
-  - [Contributors](#contributors)
-- [License](#license)
+This theme uses some parts of Twitter Bootstrap, which allows it to look nice on a mobile devices using a collapsable nav bar and hiding the
+sidebar.
 
+Some cool features:
 
-## Usage
+ - [Disqus](http://disqus.com) as a comments system;
+ - [Google Analytics](http://www.google.com/analytics/);
+ - [Yandex Metrica](http://metrica.yandex.com);
+ - Blog tags - check the section below;
+ - [Share buttons](http://pavelmakhov.com/jekyll-clean-dark/2016/09/be-social);
+ - [Table Of Content](http://pavelmakhov.com/jekyll-clean-dark/2018/08/table-of-content);
+ - Bootstrap 4 and FontAwesome 5!
+ - [Stats page](http://pavelmakhov.com/jekyll-clean-dark/stats) - WIP
 
-Just download and start the Jekyll server or fork this repo.
+All these features could be set up in `_config.yml`. Also you can have social icons which could lead to your social profiles. It uses [font-awesome](http://fontawesome.io/), so you can have any icon you want to any social profile. Out-of-the box it has: LinkedIn, GitHub, StackOverflow, LastFm, Instagram. And you can easily add more by adding new style in `theme.css` and setting it in `_config.yml`.
 
-### Sidebar menu
+Installation
+============
 
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+If you don't have your own blog you can clone this repository and put your articles in a `_posts` folder.
+If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
 
-```
----
-layout: page
-title: About
----
-```
+After you will have to set up your `_config.yml`
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` 
+I tried to setup gem installation, but it doesn't work well as theme has many customizations. So I wouldn't recommend to use gem.
+ 
+Blog tags
+=========
 
+To use this feature you simply will need to create a markdown file for each tag which you are using in you site in **tag** folder. To simplify this procedure there is an [/admin](http://pavelmakhov.com/jekyll-clean-dark/admin.html) page, which outputs the bash command which you just need to run inside **tag** folder of your site. Also don't forget to rerun it when you add a post with new tag.
 
-### Reverse layout
+License
+=======
 
-Reverse the page orientation with a single class.
+The content of this theme is distributed and licensed under a
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-### Contact Form
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
 
-Using formspree to enable contact form in static site.
+In other words: you can do anything you want with this theme on any site, just please
+provide a link to the original theme on github.
 
-Go a head `contact/index.html` just change the email in the code
+This theme includes the following files which are the properties of their
+respective owners:
 
-```html
-<form action="http://formspree.io/youremail@yourdomain.com" role="form" method="POST">
-```
-
-### Comments
-
-Using [disqus](http://disqus.com/) to enable comments in static site.
-
-Just edit variable `disqus` in `_config.yml` to your disqus link.
-
-## Development
-
-Naringu come with two branches :.
-
-- `master` for active development. 
-- `gh-pages` for preview of Naringu
-
-### Author
-
-**Rizky Ariestiyansyah**
-- <https://github.com/ariestiyansyah>
-- <https://twitter.com/ariestiyansyah>
-
-### Contributors
-
-**Gildásio Júnior** - *a.k.a. @gjuniioor*
-- https://github.com/gjuniioor
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
+* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
+* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
+* js/jquery.min.js - [jquery](https://jquery.com)
