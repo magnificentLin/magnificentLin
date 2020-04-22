@@ -1,45 +1,60 @@
+---
+layout: compress
+# Default layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT Licensed
+---
+
 <!DOCTYPE html>
-<html lang="en-us">
+
+{% capture prefer_mode %}
+  {% if site.theme_mode != "dual" %}
+    mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
+
+<html lang="en" {{ prefer_mode }} >
 
   {% include head.html %}
-  {% include analytics.html %}
 
-<body class="theme-6dd">
+  <body data-spy="scroll" data-target="#toc">
 
-    {% include sidebar.html %}
-
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
+    <div id="sidebar" class="d-flex flex-column">
+      {% include sidebar.html %}
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
+    {% include topbar.html %}
 
-        document.addEventListener('click', function(e) {
-          var target = e.target;
+    <div id="main-wrapper">
+      <div id="main">
 
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
+        {% capture _content %}
+          {{ content }}
+        {% endcapture %}
 
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
+        {% include fixlinenos.html %}
+        {{ _content }}
 
-{% include footer.html %}
+        {% include footer.html %}
+      </div>
+      {% include search-results.html %}
+
+    </div> <!-- #main-wrapper -->
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% if jekyll.environment == 'production' %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+    {% include search-loader.html %}
+
+  </body>
+
+</html>
