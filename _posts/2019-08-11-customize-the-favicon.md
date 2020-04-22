@@ -1,9 +1,9 @@
 ---
-title: Customize the Favicon
+title: 构造器模式
 author: Cotes Chung
-date: 2019-08-11 00:34:00 +0800
+date: 2020-04-02 01:09:00 +0800
 categories: [Blogging, Tutorial]
-tags: [favicon]
+tags: [js设计模式]
 toc: false
 ---
 
