@@ -1,27 +1,39 @@
 ---
 title: 构造器模式
-author: Cotes Chung
+author: magnificent
 date: 2020-04-02 01:09:00 +0800
 categories: [Blogging, Tutorial]
 tags: [js设计模式]
 toc: false
 ---
 
-In [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/), the image files of [Favicons](https://www.favicon-generator.org/about/) are placed in `assets/img/favicons/`. You may need to replace them with your own. So let's see how to customize these Favicons.
+## 什么是构造器？
 
-Whit a square image (PNG, JPG or GIF) in hand, open the site [*Favicon & App Icon Generator*](https://www.favicon-generator.org/) and upload your original image.
+构造器在创建对象时执行初始化对象。在js中没有class的概念说法，它通过在构造器前面加new关键字，来实例化一个新的对象。在构造器内，用this来引用新的对象。
 
-![upload-image]({{ "/assets/img/sample/upload-image.png" | relative_url }})
+## js中使用了构造器模式和普通的function有什么区别？
 
-Click button <kbd>Create Favicon</kbd> and wait a moment for the website to generate the icons of various sizes automatically.
+* 构造器模式（构造函数）一般是首字母大写。
+* 构造函数内部会创建新对象，普通函数不会创建新的对象。
+* 构造函数的this指向的是新对象实例，普通函数内部的this指向调用函数的对象。
+* 返回值：基本类型返回this的指向，引用类型返回该对象。
 
-![download-icons]({{ "/assets/img/sample/download-icons.png" | relative_url }})
+## 构造模式创建实例如何区别实例的类型？
 
-Download the generated package, unzip and delete the following two from the extracted files:
+在创建对象时声明类型。创建数组，创建字符串等等时都可以用到构造函数。
 
-- browserconfig.xml
-- manifest.json
- 
-Now, copy the rest image files (`.PNG` and `.ICO`) to cover the original one in folder `assets/img/favicons/`.
+## 什么是原型prototype？
 
-Lastly, don't forget to rebuild your site so that the icon becomes your custom edition.
+我们在创建对象时，会有一些预定义的属性，其中定义函数的时候，这个预定义属性就是prototype。构造函数的原型 prototype 是共有的。当要通过一个函数创建大量的对象时，我们就需要在函数的prototype上添加这些方法。当创建一个对象后，新的对象会具有构造器prototype的所有属性。我们可以创建多个对象，访问相同的prototype。
+
+## 工作中使用场景
+
+```console
+const array = new Array()
+```
+
+声明字符串：
+
+```console
+const string = new String(‘王肖肖’)
+```
