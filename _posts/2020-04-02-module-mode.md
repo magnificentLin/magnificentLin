@@ -3,10 +3,10 @@ title: 模块模式
 author: magnificent
 date: 2020-04-02 01:09:00 +0800
 categories: [Blogging, Tutorial]
-tags: [js设计模式]
+tags: [js设计模式, 模块模式]
 ---
 
-### * 什么是闭包?他们两者有什么关系？
+### 什么是闭包?他们两者有什么关系？
 
 变量的作用域分为两种，全局变量和局部变量。全局变量作用域是整个程序，局部变量作用域是在所属的函数内。 闭包就是定义在函数内部的子函数，外部函数能够通过这个子函数来读取函数内部的局部变量。模块模式使用闭包来解决私有和公有的封装问题。
 
@@ -17,6 +17,14 @@ tags: [js设计模式]
 ### 详细说明(function(){})()
 
 (function(){})()是匿名函数，使用function关键字声明函数，但未指定函数名。前面的括号内是函数体，后面的()表示执行。用匿名函数让变量的作用域控制在匿名函数之内。
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
 
 {% raw %}
 ```liquid

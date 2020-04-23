@@ -3,7 +3,7 @@ title: 构造器模式
 author: magnificent
 date: 2020-04-02 01:09:00 +0800
 categories: [Blogging, Tutorial]
-tags: [js设计模式]
+tags: [js设计模式, 构造器模式]
 toc: false
 ---
 
