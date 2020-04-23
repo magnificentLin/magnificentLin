@@ -52,7 +52,7 @@ $.each(['unComplete', 'unActivation', 'activation'], function(index, value) {
 // 输出：[0, 'unComplete']  [1, 'unActivation']  [2, 'activation']
 ```
 
-***
+---
 
 迭代器可以通过break来跳出循环。
 
