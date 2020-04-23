@@ -35,6 +35,8 @@ $.each(['unComplete', 'unActivation', 'activation'], function(index, value) {
 
 迭代器规则规定了index位置和元素。无法更改。
 
+---
+
 ### 外部迭代器
 
 ```shell
@@ -51,8 +53,6 @@ $.each(['unComplete', 'unActivation', 'activation'], function(index, value) {
 
 // 输出：[0, 'unComplete']  [1, 'unActivation']  [2, 'activation']
 ```
-
----
 
 迭代器可以通过break来跳出循环。
 
