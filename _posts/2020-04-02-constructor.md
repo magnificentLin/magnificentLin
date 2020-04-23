@@ -26,7 +26,7 @@ toc: false
 
 >我们在创建对象时，会有一些预定义的属性，其中定义函数的时候，这个预定义属性就是prototype。构造函数的原型 prototype 是共有的。当要通过一个函数创建大量的对象时，我们就需要在函数的prototype上添加这些方法。当创建一个对象后，新的对象会具有构造器prototype的所有属性。我们可以创建多个对象，访问相同的prototype。
 
-### 工作中使用场景
+### 构造器模式的应用场景。
 
 ```shell
 const array = new Array()
