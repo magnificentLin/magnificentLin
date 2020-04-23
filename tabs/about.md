@@ -8,4 +8,6 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+### 个人技术博客
+
+> **版权声明**：本站文章均出自「[Magnificent Lin](https://magnificentlin.github.io)」的原创文章，遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 版权协议，转载请附上原文出处链接以及版权声明。
