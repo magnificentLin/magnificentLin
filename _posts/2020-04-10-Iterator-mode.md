@@ -2,7 +2,7 @@
 title: 迭代器模式
 author: magnificent
 date: 2020-04-10 12:22:00 +0800
-categories: [Blogging, Tutorial]
+categories: [js, Design Mode]
 tags: [js设计模式, 迭代器模式]
 ---
 
